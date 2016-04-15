@@ -26,6 +26,10 @@ body {
 	background: -webkit-linear-gradient(top, #d2dfed 0%,#c8d7eb 16%,#c8d7eb 16%,#a6c0e3 29%,#a6c0e3 29%,#a6c0e3 29%,#bed0ea 45%,#afc7e8 62%,#bad0ef 75%,#99b5db 88%,#799bc8 100%);
 }
 
+th {
+	font-style: normal;
+}
+
 #friendsTable {
 	margin-top: 10%;
 
@@ -50,24 +54,24 @@ body {
 
 .container-fluid {
 	margin: 3%;
+	padding-bottom: 50px;
 
 }
 
 .rowTemplate {
 	display: none;
+	
 }
 
 .table {
 	font-style: italic;
-	font-weight: bold;	
+	font-weight: bold;
+	padding-bottom: 100px;
+	margin-bottom: 10%;	
 }
 
 .tableHead {
 	background-color: #C2F2D6;
-}
-
-th {
-	font-style: normal;
 }
 
 
@@ -76,5 +80,9 @@ th {
 }
 .btn-success {
 	box-shadow: 5px 3px 3px gray;
+}
+
+.newPerson {
+	padding-top: 50px
 }
 

@@ -1,0 +1,80 @@
+h1 {
+	margin-bottom: 5%;
+	margin-left: 90px;
+	font-family: 'Oswald', sans-serif;
+	font-size: 68px;
+	color: #485151;
+	font-weight: bold;
+}
+
+p {
+	color: #485151
+	font-family: 'Cinzel', serif;
+	font-size: 24px;
+	margin-bottom: 3%;
+
+}
+
+img {
+	max-width: 150px;
+	max-height: 150px;
+	border-radius: 15px;
+	box-shadow: 3px 2px 2px gray;
+}
+
+body {
+	background: -webkit-linear-gradient(top, #d2dfed 0%,#c8d7eb 16%,#c8d7eb 16%,#a6c0e3 29%,#a6c0e3 29%,#a6c0e3 29%,#bed0ea 45%,#afc7e8 62%,#bad0ef 75%,#99b5db 88%,#799bc8 100%);
+}
+
+#friendsTable {
+	margin-top: 10%;
+
+}
+
+.addie {
+	margin-bottom: -85px;
+    -webkit-transform: rotate(-30deg);
+    box-shadow: none;
+}
+.text-muted {
+	float: right;
+	font-size: 18px;
+}
+
+.panel-heading {
+	font-size: 22px;
+	color: #485151;
+	font-weight: bold;
+
+}
+
+.container-fluid {
+	margin: 3%;
+
+}
+
+.rowTemplate {
+	display: none;
+}
+
+.table {
+	font-style: italic;
+	font-weight: bold;	
+}
+
+.tableHead {
+	background-color: #C2F2D6;
+}
+
+th {
+	font-style: normal;
+}
+
+
+.well, #friendsTable {
+	box-shadow: 10px 5px 5px gray;
+}
+.btn-success {
+	box-shadow: 5px 3px 3px gray;
+}
+

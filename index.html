@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/animatecss/3.5.1/animate.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="main.js"></script>
+	
+	<title>Contacts</title>
+</head>
+<body>
+<div class="container-fluid">
+
+	<div class="row">
+        <div class="col-lg-8 col-lg-offset-2"> 
+        	<img class="addie animated zoomInUp" src="https://pixabay.com/static/uploads/photo/2015/03/20/15/04/time-682333_960_720.png" alt="address book">
+        	<h1 class="animated zoomInDown">Contacts</h1>
+        	<div class="well">
+			       
+    		<form id="contact-form" role="form">
+
+    		<div class="controls">
+
+       			 <div class="row">
+           			 <div class="col-md-6">
+                		<label for="form_name">Name</label>
+                			<input id="form_name" type="text" name="name" class="form-control clear" placeholder="First Last*" required="required">
+            		</div>
+            	<div class="col-md-6">
+                	<label for="form_address">Address</label>
+                		<input id="form_address" type="text" name="address" class="form-control clear" placeholder="123 Main St Pleasantville, OH, 12345" required="required">
+            	</div>
+            	<div class="col-md-6">
+            	    <label for="form_email">Email</label>
+            	    <input id="form_email" type="email" name="email" class="form-control clear" placeholder="Email" required="required">
+            	</div>
+            	<div class="col-md-6">
+            	    <label for="form_phone">Phone</label>
+            	    <input id="form_phone" type="number" name="phone" class="form-control clear" placeholder="Phone">
+            	</div>
+            	<div class="col-md-6">
+            	    <label for="form_photo">Photo</label>
+            	    <input id="form_photo" type="text" name="photo" class="form-control clear" placeholder="Enter image url">
+            	</div>
+            	
+            	
+        	</div>
+        </form>
+		<div class="row">
+        	<div class="col-md-12 reqd">
+        	    <p class="text-muted"><strong>*</strong> These fields are 		required.</p>
+        	</div>
+        	<div class="col-md-12">
+        	    <input  class="btn btn-success btn-send" value="Submit">
+        	</div>
+
+		</div>
+
+    </div>
+			</div>
+	
+    
+    <div id="friendsTable">
+    	<div class="panel panel-default">
+  	<!-- Default panel contents -->
+  		<div class="panel-heading">Contact List</div>	
+		<div class="table-responsive">
+		<table class="table">
+  			<tr class="tableHead">
+  			  <th>Photo</th>
+  			  <th>Name</th>
+  			  <th>Address</th>
+  			  <th>Email</th>
+  			  <th>Phone</th>
+  			</tr>
+  			<tr class="rowTemplate" id="rowTemplateId">
+  				<td class="animated bounce" id="info-photo"></td>
+  				<td id="info-name">this is a name</td>
+  				<td id="info-address">this is an address</td>
+  				<td id="info-email">this is an email</td>
+  				<td id="info-phone">this is a phone number</td>
+  			</tr>
+  		</table>
+  	</div>
+  		</div>
+	</div>
+</div>
+</body>
+</html>

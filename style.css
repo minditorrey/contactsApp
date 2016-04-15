@@ -18,7 +18,7 @@ p {
 img {
 	max-width: 150px;
 	max-height: 150px;
-	border-radius: 15px;
+	border-radius: 25px;
 	box-shadow: 3px 2px 2px gray;
 }
 
@@ -67,9 +67,13 @@ body {
 }
 
 th {
-	font-style: normal;
+	font-style: none;
+
 }
 
+span {
+	color: blue;
+}
 
 .well, #friendsTable {
 	box-shadow: 10px 5px 5px gray;

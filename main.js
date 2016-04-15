@@ -5,9 +5,7 @@
 $(document).ready(init);
 
 function init() {
-	$('.btn-send').click(addContact);
-	
-	
+	$('.btn-send').click(addContact);	
 }
 
 function addContact () {

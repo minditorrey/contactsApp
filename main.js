@@ -6,6 +6,7 @@ function init() {
 	$('.save-it').click(addContact);
 	renderList();
 	$('.delete').click(removeContact);
+	$('.update').click(updateContact);
 }
 
 function addContact () {
@@ -32,13 +33,12 @@ function addContact () {
 	var newPhone = newRow.children('#info-phone').text(phone);
 
 	$('.table').append(newRow);
-
 	$('.clear').val('');
 
 	var contacts = ContactStorage.get();
 	contacts.push(newContact);
 	ContactStorage.write(contacts);
-	
+	location.reload();
 }
 
 var ContactStorage = {
@@ -95,8 +95,9 @@ function removeContact() {
 	console.log(index);
 }
 
-function editContact() {
-
+function updateContact() {
+	var contacts = ContactStorage.get();
+	var index = $(this).parent.index();
 
 }
 

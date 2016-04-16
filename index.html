@@ -16,79 +16,96 @@
 	<title>Contacts</title>
 </head>
 <body>
-<div class="container-fluid">
+  <div class="container-fluid">
 
-	<div class="row">
-        <div class="col-lg-8 col-lg-offset-2"> 
-        	<img class="addie animated zoomInUp" src="https://pixabay.com/static/uploads/photo/2015/03/20/15/04/time-682333_960_720.png" alt="address book">
-        	<h1 class="animated zoomInDown">Contacts</h1>
-        	<div class="well">
-			       
-    		<form id="contact-form" role="form">
-    		<div class="controls">
-
-       			 <div class="row">
-           			 <div class="col-md-6">
-                		<label for="form_name">Name</label>
-                			<input id="form_name" type="text" name="name" class="form-control clear" placeholder="First Last*" required="required">
-            		</div>
-            	<div class="col-md-6">
-                	<label for="form_address">Address</label>
-                		<input id="form_address" type="text" name="address" class="form-control clear" placeholder="123 Main St Pleasantville, OH, 12345" required="required">
-            	</div>
-            	<div class="col-md-6">
-            	    <label for="form_email">Email</label>
-            	    <input id="form_email" type="email" name="email" class="form-control clear" placeholder="Email" required="required">
-            	</div>
-            	<div class="col-md-6">
-            	    <label for="form_phone">Phone</label>
-            	    <input id="form_phone" type="number" name="phone" class="form-control clear" placeholder="8885551234">
-            	</div>
-            	<div class="col-md-6">
-            	    <label for="form_photo">Photo</label>
-            	    <input id="form_photo" type="text" name="photo" class="form-control clear" placeholder="Enter image url">
-            	</div>
-            	           	
-        	</div>
-        </form>
-		<div class="row">
-        	<div class="col-md-12 reqd">
-        	    <p class="text-muted"><strong>*</strong> These fields are 		required.</p>
-        	</div>
-        	<div class="col-md-12">
-        	    <input  class="btn btn-success btn-send" value="Submit">
-        	</div>
-
-		</div>
-
+	 <div class="row">
+    <div class="col-lg-8 col-lg-offset-2"> 
+    	<img class="addie animated zoomInUp" src="https://upload.wikimedia.org/wikipedia/commons/4/47/Crystal_Project_addressbook.png" alt="address book">
+    	<h1 class="animated zoomInDown">Contacts</h1>
+      
+      <button class="btn btn-lg btn-success add-contact" data-toggle="modal" 
+      data-target="#basicModal">Add Contact</button>
     </div>
-			</div>
+   </div>
+
+    <div class="modal fade" id="basicModal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title" id="myModalLabel">New Contact</h4>
+          </div>
+          <div class="modal-body">
+                <!-- form goes here -->
+            <form id="contact-form" role="form">
+              <div class="control">
+                <div class="row">
+                  <div class="col-md-6">
+                    <label for="form_name">Name</label>
+                    <input id="form_name" type="text" name="name" class="form-control clear" placeholder="First Last*" required="required">
+                  </div>
+                  <div class="col-md-6">
+                    <label for="form_address">Address</label>
+                    <input id="form_address" type="text" name="address" class="form-control clear" placeholder="123 Main St Pleasantville OH, 12345" required="required">
+                  </div>
+                  <div class="col-md-6">
+                    <label for="form_email">Email</label>
+                    <input id="form_email" type="email" name="email" class="form-control clear" placeholder="Email" required="required">
+                  </div>
+                  <div class="col-md-6">
+                    <label for="form_phone">Phone</label>
+                    <input id="form_phone" type="number" name="phone" class="form-control clear" placeholder="8885551234">
+                  </div>
+                  <div class="col-md-6">
+                    <label for="form_photo">Photo</label>
+                    <input id="form_photo" type="text" name="photo" class="form-control clear" placeholder="Enter image url">
+                  </div>
+                  <p class="text-muted"><strong>*</strong>Required Field</p>         
+                </div>
+            </form>  
+
+          </div>
+          <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary save-it" value="submit">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
 	
-    
-    <div id="friendsTable">
-    	<div class="panel panel-default">
-  	<!-- Default panel contents -->
-  		<div class="panel-heading">Contact List</div>	
-		<div class="table-responsive">
-		<table class="table">
-  			<tr class="tableHead">
-  			  <th><span class="glyphicon glyphicon-picture" aria-hidden="true"></span> Photo</th>
-  			  <th><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Name</th>
-  			  <th><span class="glyphicon glyphicon-file" aria-hidden="true"></span> Address</th>
-  			  <th><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> Email</th>
-  			  <th><span class="glyphicon glyphicon-phone" aria-hidden="true"></span> Phone</th>
-  			</tr>
-  			<tr class="rowTemplate" id="rowTemplateId">
-  				<td class="animated bounce" id="info-photo"></td>
-  				<td id="info-name">this is a name</td>
-  				<td id="info-address">this is an address</td>
-  				<td id="info-email">this is an email</td>
-  				<td id="info-phone">this is a phone number</td>
-  			</tr>
-  		</table>
-  	</div>
-  		</div>
-	</div>
-</div>
+       <div class="row">
+        <div class="col-lg-8 col-lg-offset-2">   
+        <div id="friendsTable">
+        	<div class="panel panel-default">
+  	   	  <div class="panel-heading">Contact List</div>	
+		          <div class="table-responsive">
+		            <table class="table">
+  	          		<thead class="tableHead">
+                    
+  	          		  <th><span class="glyphicon glyphicon-picture" aria-hidden="true"></span> Photo</th>
+  	          		  <th><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Name</th>
+  	          		  <th><span class="glyphicon glyphicon-file" aria-hidden="true"></span> Address</th>
+  	          		  <th><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> Email</th>
+  	          		  <th><span class="glyphicon glyphicon-phone" aria-hidden="true"></span> Phone</th>
+                    <th>Remove</th>
+  	          		</thead>
+                  <tbody class="contacts">    
+  	          		<tr class="rowTemplate delete" id="rowTemplateId">
+  	          			<td class="animated bounce" id="info-photo"></td>
+  	          			<td id="info-name">this is a name</td>
+  	          			<td id="info-address">this is an address</td>
+  	          			<td id="info-email">this is an email</td>
+  	          			<td id="info-phone">this is a phone number</td> 
+                    <td><span class="glyphicon glyphicon-remove"></span></td>
+  	          		</tr>
+                  </tbody>
+  	          	</table>
+  	         </div>
+  	   	  </div>
+	       </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
 </html>

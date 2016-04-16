@@ -8,6 +8,7 @@ function init() {
 	$('.delete').click(removeContact);
 }
 
+
 function addContact () {
 	var photo = $('#form_photo').val();
 	

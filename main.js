@@ -54,7 +54,6 @@ var ContactStorage = {
 		localStorage.contactList = JSON.stringify(contacts);
 	}
 
-
 };
 
 function renderList() {

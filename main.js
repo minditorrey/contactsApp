@@ -86,7 +86,7 @@ function renderList() {
 
 function removeContact() {
 	var contacts = ContactStorage.get();
-	var index = $(this).parent().index();
+	var index = $(this).index();
 	// $(this).remove();
 	contacts.splice(index, 1); ///splice removes this one contact
 	ContactStorage.write(contacts);
